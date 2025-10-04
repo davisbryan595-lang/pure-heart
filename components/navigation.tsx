@@ -32,10 +32,22 @@ export default function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Pure Heart Athletics" width={210} height={120} className="h-14 w-auto" />
+          <a href="#home" className="relative group flex items-center">
+            <div className="relative inline-block">
+              <Image
+                src="/logo.png"
+                alt="Pure Heart Athletics"
+                width={400} // doubled
+                height={220} // doubled
+                className="h-24 w-auto transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Shine Effect */}
+              <div className="absolute inset-0 overflow-hidden rounded-md">
+                <div className="absolute inset-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 animate-shine" />
+              </div>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
