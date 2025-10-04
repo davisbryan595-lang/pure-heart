@@ -35,7 +35,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Pure Heart Athletics" width={180} height={60} className="h-12 w-auto" />
+            <Image src="/logo.png" alt="Pure Heart Athletics" width={210} height={120} className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
