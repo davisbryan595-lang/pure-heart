@@ -34,21 +34,23 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <a href="#home" className="relative group flex items-center">
-            <div className="relative inline-block">
+          {/* Logo */}
+          <a href="#home" className="flex items-center space-x-2 relative group">
+            <div className="relative">
               <Image
                 src="/logo.png"
                 alt="Pure Heart Athletics"
-                width={400} // doubled
-                height={220} // doubled
-                className="h-24 w-auto transition-transform duration-500 group-hover:scale-105"
+                width={420}   // doubled from 210
+                height={240}  // doubled from 120
+                className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Shine Effect */}
-              <div className="absolute inset-0 overflow-hidden rounded-md">
-                <div className="absolute inset-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 animate-shine" />
+              {/* Glossy Shine Overlay */}
+              <div className="absolute inset-0 rounded-md overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 -skew-x-12 translate-x-[-150%] bg-gradient-to-r from-white/40 to-transparent animate-shine"></div>
               </div>
             </div>
           </a>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
