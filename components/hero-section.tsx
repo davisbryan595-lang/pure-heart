@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-start overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-end overflow-hidden">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -17,11 +17,11 @@ export default function HeroSection() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/60 to-secondary/90" />
+        <div className="absolute inset-0 bg-gradient-to-l from-secondary/80 via-secondary/60 to-secondary/90" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-left px-6 sm:px-12 lg:px-20 max-w-4xl">
+      <div className="relative z-10 text-right px-6 sm:px-12 lg:px-20 max-w-4xl">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-12 max-w-xl"
+          className="text-xl md:text-2xl text-white/90 mb-12 max-w-xl ml-auto"
         >
           Elite athletic training for volleyball and basketball athletes
         </motion.p>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 justify-end"
         >
           <Button
             size="lg"
@@ -64,7 +64,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator (still centered at bottom) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
