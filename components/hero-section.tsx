@@ -17,7 +17,7 @@ export default function HeroSection() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/60 to-secondary/90" />
+        <div className="absolute inset-0 bg-transparent from-secondary/80 via-secondary/60 to-secondary/90" />
       </div>
 
       {/* Content */}
