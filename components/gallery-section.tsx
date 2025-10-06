@@ -16,19 +16,19 @@ const galleryImages = [
     alt: "Basketball practice",
   },
   {
-    url: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
+    url: "/pure3.jpeg",
     alt: "Athletic training",
   },
   {
-    url: "https://images.unsplash.com/photo-1519766304817-4f37bda74a26?q=80&w=2070&auto=format&fit=crop",
+    url: "/pure4.jpeg",
     alt: "Team celebration",
   },
   {
-    url: "https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?q=80&w=2070&auto=format&fit=crop",
+    url: "/pure5.jpeg",
     alt: "Volleyball spike",
   },
   {
-    url: "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?q=80&w=1974&auto=format&fit=crop",
+    url: "pureteam1.jpeg",
     alt: "Basketball dribbling",
   },
 ]
