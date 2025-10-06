@@ -38,7 +38,7 @@ export default function Navigation() {
           <a href="#home" className="flex items-center space-x-2 relative group">
             <div className="relative">
               <Image
-                src="/pureheartlogo.jpeg"
+                src="/plogo.png"
                 alt="Pure Heart Athletics"
                 width={420}   // doubled from 210
                 height={240}  // doubled from 120
