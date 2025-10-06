@@ -40,8 +40,8 @@ export default function Navigation() {
               <Image
                 src="/plogo.png"
                 alt="Pure Heart Athletics"
-                width={420}   // doubled from 210
-                height={240}  // doubled from 120
+                width={350}   // doubled from 210
+                height={200}  // doubled from 120
                 className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
               />
               {/* Glossy Shine Overlay */}

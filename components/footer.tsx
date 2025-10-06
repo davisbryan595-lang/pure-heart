@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <Image src="/plogo.png" alt="Pure Heart Athletics" width={200} height={67} className="h-14 w-auto mb-4" />
+            <Image src="/plogo.png" alt="Pure Heart Athletics" width={200} height={350} className="h-14 w-auto mb-4" />
             <p className="text-white/80 leading-relaxed mb-6">
               Empowering athletes to reach their full potential through dedication, expert coaching, and a commitment to
               excellence.
