@@ -8,7 +8,7 @@ import { X } from "lucide-react"
 
 const galleryImages = [
   {
-    url: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2007&auto=format&fit=crop",
+    url: "/pure.jpeg",
     alt: "Volleyball training session",
   },
   {
