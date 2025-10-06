@@ -12,7 +12,7 @@ const galleryImages = [
     alt: "Volleyball training session",
   },
   {
-    url: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2090&auto=format&fit=crop",
+    url: "/pure2.jpeg",
     alt: "Basketball practice",
   },
   {
