@@ -21,7 +21,8 @@ export default function AboutSection() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-primary/80" />
+        {/* Deep Blue Overlay for mood & readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0A6C]/95 via-[#0D0A6C]/85 to-[#0D0A6C]/75" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -32,7 +33,10 @@ export default function AboutSection() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
-            About <span className="text-accent">Pure Heart Athletics</span>
+            About{" "}
+            <span className="text-[#0D0A6C] bg-white/10 px-3 py-1 rounded-lg shadow-[0_0_15px_rgba(13,10,108,0.6)]">
+              Pure Heart Athletics
+            </span>
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
             At Pure Heart Athletics, we believe in developing not just skilled athletes, but champions with character.
@@ -61,10 +65,12 @@ export default function AboutSection() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="glossy-card p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+              className="bg-white/10 backdrop-blur-lg border border-[#0D0A6C]/40 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300 shadow-[0_0_25px_rgba(13,10,108,0.3)]"
             >
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.number}</div>
-              <div className="text-white/80 font-medium">{stat.label}</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#0D0A6C] mb-2 drop-shadow-[0_0_10px_rgba(13,10,108,0.4)]">
+                {stat.number}
+              </div>
+              <div className="text-white/85 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
