@@ -57,7 +57,7 @@ export default function TeamSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Meet the <span className="text-primary">Team</span>
+            Meet the <span className="text-[#0F172A]">Team</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Expert coaches dedicated to your success
@@ -73,16 +73,16 @@ export default function TeamSection() {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 bg-card">
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-[#0F172A]/20 transition-all duration-500 bg-card">
                 <div className="relative h-80 overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2"
                     style={{ backgroundImage: `url(${member.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+                    <p className="text-[#0F172A] text-sm font-medium mb-2">{member.role}</p>
                     <p className="text-sm text-white/80 leading-relaxed">{member.bio}</p>
                   </div>
                 </div>
@@ -104,10 +104,10 @@ export default function TeamSection() {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${team[currentIndex].image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent opacity-90" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">{team[currentIndex].name}</h3>
-                  <p className="text-primary text-base font-medium mb-3">{team[currentIndex].role}</p>
+                  <p className="text-[#0F172A] text-base font-medium mb-3">{team[currentIndex].role}</p>
                   <p className="text-base text-white/90 leading-relaxed">{team[currentIndex].bio}</p>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function TeamSection() {
               variant="outline"
               size="icon"
               onClick={prevSlide}
-              className="rounded-full bg-primary/10 border-primary/30 hover:bg-primary hover:text-white"
+              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -127,7 +127,7 @@ export default function TeamSection() {
               variant="outline"
               size="icon"
               onClick={nextSlide}
-              className="rounded-full bg-primary/10 border-primary/30 hover:bg-primary hover:text-white"
+              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
