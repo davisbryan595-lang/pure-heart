@@ -17,7 +17,8 @@ export default function HeroSection() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-transparent from-secondary/80 via-secondary/60 to-secondary/90" />
+        {/* Dark Blue Overlay for theme consistency */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0A6C]/70 via-[#0D0A6C]/60 to-[#0D0A6C]/80" />
       </div>
 
       {/* Content */}
@@ -28,7 +29,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance"
         >
-          Next-Gen Greatness, <span className="text-primary">Fueled by Heart</span>
+          Next-Gen Greatness,{" "}
+          <span className="text-[#0D0A6C] drop-shadow-[0_0_15px_rgba(13,10,108,0.6)]">
+            Fueled by Heart
+          </span>
         </motion.h1>
 
         <motion.p
@@ -48,16 +52,17 @@ export default function HeroSection() {
         >
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all duration-300"
-            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-[#0D0A6C] hover:bg-[#0D0A6C]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-[0_0_25px_rgba(13,10,108,0.6)] hover:scale-105 transition-all duration-300"
+            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: 'smooth' })}
           >
             Explore Services
           </Button>
+
           <Button
             size="lg"
             variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-white/10 backdrop-blur-sm border-[#0D0A6C]/50 text-white hover:bg-[#0D0A6C]/20 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-[0_0_25px_rgba(13,10,108,0.6)] hover:scale-105 transition-all duration-300"
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: 'smooth' })}
           >
             Get Started
           </Button>
@@ -71,7 +76,7 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <ChevronDown className="w-8 h-8 text-white animate-bounce" />
+        <ChevronDown className="w-8 h-8 text-[#0D0A6C] animate-bounce drop-shadow-[0_0_10px_rgba(13,10,108,0.6)]" />
       </motion.div>
     </section>
   )
