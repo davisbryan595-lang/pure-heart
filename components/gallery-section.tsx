@@ -28,7 +28,7 @@ const galleryImages = [
     alt: "Volleyball spike",
   },
   {
-    url: "pureteam1.jpeg",
+    url: "/pureteam1.jpeg",
     alt: "Basketball dribbling",
   },
 ]
@@ -39,8 +39,13 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
-    <section id="gallery" ref={ref} className="py-24 md:py-32 bg-background">
+    <section
+      id="gallery"
+      ref={ref}
+      className="py-24 md:py-32 bg-gradient-to-b from-background via-muted/20 to-background"
+    >
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -53,26 +58,33 @@ export default function GallerySection() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Capturing moments of excellence and dedication
           </p>
+          <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </motion.div>
 
+        {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative aspect-square overflow-hidden rounded-2xl cursor-pointer group"
+              className="relative aspect-square overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-xl transition-shadow duration-300"
               onClick={() => setSelectedImage(image.url)}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                 style={{ backgroundImage: `url(${image.url})` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#002B5B]/70 via-[#002B5B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 rounded-full bg-primary/90 backdrop-blur-md flex items-center justify-center shadow-lg">
+                  <svg
+                    className="w-7 h-7 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -91,10 +103,17 @@ export default function GallerySection() {
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="max-w-5xl p-0 bg-transparent border-0">
           <div className="relative">
-            <img src={selectedImage || ""} alt="Gallery image" className="w-full h-auto rounded-lg" />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              src={selectedImage || ""}
+              alt="Gallery image"
+              className="w-full h-auto rounded-xl shadow-2xl"
+            />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-secondary/80 backdrop-blur-sm flex items-center justify-center hover:bg-secondary transition-colors"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#002B5B]/70 backdrop-blur-sm flex items-center justify-center hover:bg-[#002B5B] transition-colors"
             >
               <X className="w-5 h-5 text-white" />
             </button>
