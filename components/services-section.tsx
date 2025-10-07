@@ -44,7 +44,7 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Our <span className="text-primary">Services</span>
+            Our <span className="text-[#0F172A]">Services</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Tailored training programs to elevate your game
@@ -59,7 +59,7 @@ export default function ServicesSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 bg-card">
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-[#0F172A]/20 transition-all duration-500 hover:-translate-y-2 bg-card">
                 <div className="relative h-64 overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -67,11 +67,11 @@ export default function ServicesSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <service.icon className="w-12 h-12 text-primary" />
+                    <service.icon className="w-12 h-12 text-[#0F172A]" />
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-[#0F172A] transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">{service.description}</p>

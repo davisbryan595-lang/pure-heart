@@ -1,12 +1,39 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import { useRef, useEffect, useState } from "react"
 
 export default function AboutSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  // Animated counter logic
+  const Counter = ({ target, duration = 1500 }) => {
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+      if (!isInView) return
+      let start = 0
+      const end = parseInt(target.replace(/\D/g, ""), 10)
+      const increment = end / (duration / 16)
+
+      const counter = setInterval(() => {
+        start += increment
+        if (start >= end) {
+          clearInterval(counter)
+          setCount(end)
+        } else {
+          setCount(Math.floor(start))
+        }
+      }, 16)
+
+      return () => clearInterval(counter)
+    }, [isInView, target, duration])
+
+    // Add back plus or percent symbols if needed
+    const suffix = target.includes("+") ? "+" : target.includes("%") ? "%" : ""
+    return <>{count}{suffix}</>
+  }
 
   return (
     <section id="about" ref={ref} className="relative py-24 md:py-32 overflow-hidden">
@@ -21,8 +48,7 @@ export default function AboutSection() {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Deep Blue Overlay for mood & readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0A6C]/95 via-[#0D0A6C]/85 to-[#0D0A6C]/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-[#0F172A]/80" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -33,10 +59,7 @@ export default function AboutSection() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
-            About{" "}
-            <span className="text-[#0D0A6C] bg-white/10 px-3 py-1 rounded-lg shadow-[0_0_15px_rgba(13,10,108,0.6)]">
-              Pure Heart Athletics
-            </span>
+            About <span className="text-[#0F172A]">Pure Heart Athletics</span>
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
             At Pure Heart Athletics, we believe in developing not just skilled athletes, but champions with character.
@@ -50,7 +73,7 @@ export default function AboutSection() {
           </p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats with animated count-up */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -65,12 +88,12 @@ export default function AboutSection() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-lg border border-[#0D0A6C]/40 p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300 shadow-[0_0_25px_rgba(13,10,108,0.3)]"
+              className="glossy-card p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-4xl md:text-5xl font-bold text-[#0D0A6C] mb-2 drop-shadow-[0_0_10px_rgba(13,10,108,0.4)]">
-                {stat.number}
+              <div className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-2">
+                <Counter target={stat.number} />
               </div>
-              <div className="text-white/85 font-medium">{stat.label}</div>
+              <div className="text-white/80 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
