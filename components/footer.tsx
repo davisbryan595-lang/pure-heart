@@ -10,11 +10,28 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <Image src="/plogo.png" alt="Pure Heart Athletics" width={200} height={350} className="h-14 w-auto mb-4" />
+            {/* Logo with hover and shine animation */}
+            <a href="#home" className="flex items-center space-x-2 relative group mb-6">
+              <div className="relative">
+                <Image
+                  src="/plogo.png"
+                  alt="Pure Heart Athletics"
+                  width={350}
+                  height={200}
+                  className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Glossy Shine Overlay */}
+                <div className="absolute inset-0 rounded-md overflow-hidden pointer-events-none">
+                  <div className="absolute inset-0 -skew-x-12 translate-x-[-150%] bg-gradient-to-r from-white/40 to-transparent animate-shine"></div>
+                </div>
+              </div>
+            </a>
+
             <p className="text-white/80 leading-relaxed mb-6">
               Empowering athletes to reach their full potential through dedication, expert coaching, and a commitment to
               excellence.
             </p>
+
             <div className="flex gap-4">
               <a
                 href="https://facebook.com"
