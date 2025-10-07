@@ -18,7 +18,7 @@ export default function HeroSection() {
         }}
       >
         {/* Dark Blue Overlay for theme consistency */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0A6C]/70 via-[#0D0A6C]/60 to-[#0D0A6C]/80" />
+        <div className="absolute inset-0 bg-transparent from-[#0D0A6C]/70 via-[#0D0A6C]/60 to-[#0D0A6C]/80" />
       </div>
 
       {/* Content */}
