@@ -62,8 +62,13 @@ export default function PricingSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="pricing" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
+    <section
+      id="pricing"
+      ref={ref}
+      className="py-24 md:py-32 bg-gradient-to-b from-background via-muted/20 to-background"
+    >
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -76,8 +81,10 @@ export default function PricingSection() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Choose the perfect plan to achieve your athletic goals
           </p>
+          <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </motion.div>
 
+        {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
@@ -88,39 +95,82 @@ export default function PricingSection() {
               className={plan.popular ? "md:-mt-4" : ""}
             >
               <Card
-                className={`relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
-                  plan.popular ? "bg-gradient-to-br from-primary/10 to-accent/10 ring-2 ring-primary" : "bg-card"
+                className={`relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl ${
+                  plan.popular
+                    ? "bg-gradient-to-br from-[#002B5B]/90 via-[#004080]/70 to-[#1B263B]/80 text-white shadow-primary/30 ring-2 ring-primary"
+                    : "bg-card"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 bg-[#002B5B] text-white px-4 py-1 text-sm font-bold rounded-bl-lg shadow-md">
                     MOST POPULAR
                   </div>
                 )}
                 <CardHeader className="text-center pb-8 pt-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${
+                      plan.popular ? "text-white" : "text-foreground"
+                    }`}
+                  >
+                    {plan.name}
+                  </h3>
                   <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-5xl font-bold text-primary">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">{plan.period}</span>
+                    <span
+                      className={`text-5xl font-bold ${
+                        plan.popular ? "text-white" : "text-primary"
+                      }`}
+                    >
+                      {plan.price}
+                    </span>
+                    <span
+                      className={`ml-2 ${
+                        plan.popular ? "text-white/70" : "text-muted-foreground"
+                      }`}
+                    >
+                      {plan.period}
+                    </span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{plan.description}</p>
+                  <p
+                    className={`text-sm ${
+                      plan.popular ? "text-white/80" : "text-muted-foreground"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
                 </CardHeader>
                 <CardContent className="space-y-4 pb-8">
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">{feature}</span>
+                      <li
+                        key={featureIndex}
+                        className="flex items-start gap-3"
+                      >
+                        <Check
+                          className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                            plan.popular ? "text-white" : "text-primary"
+                          }`}
+                        />
+                        <span
+                          className={`${
+                            plan.popular ? "text-white/90" : "text-foreground"
+                          }`}
+                        >
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
                   <Button
                     className={`w-full mt-6 rounded-full py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 ${
                       plan.popular
-                        ? "bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/30"
-                        : "bg-secondary hover:bg-secondary/90 text-white"
+                        ? "bg-white text-[#002B5B] hover:bg-gray-100"
+                        : "bg-[#002B5B] hover:bg-[#00376b] text-white"
                     }`}
-                    onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                    onClick={() =>
+                      document
+                        .getElementById("contact")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                   >
                     Sign Up Now
                   </Button>
