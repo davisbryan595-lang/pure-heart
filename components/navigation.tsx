@@ -28,20 +28,21 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-secondary/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-[#839BE3]/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
-          {/* Logo */}
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 relative group">
             <div className="relative">
               <Image
                 src="/plogo.png"
                 alt="Pure Heart Athletics"
-                width={350}   // doubled from 210
-                height={200}  // doubled from 120
+                width={350}
+                height={200}
                 className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
               />
               {/* Glossy Shine Overlay */}
@@ -51,14 +52,13 @@ export default function Navigation() {
             </div>
           </a>
 
-
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-primary transition-colors duration-300 font-medium"
+                className="text-white px-4 py-2 rounded-md transition-all duration-300 font-medium hover:bg-white hover:text-[#839BE3] hover:shadow-md"
               >
                 {link.name}
               </a>
@@ -78,12 +78,12 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-secondary/95 backdrop-blur-md">
+          <div className="md:hidden py-4 bg-[#839BE3]/95 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 text-white hover:text-primary transition-colors duration-300 font-medium"
+                className="block py-3 px-4 text-white hover:bg-white hover:text-[#839BE3] rounded-md transition-all duration-300 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
