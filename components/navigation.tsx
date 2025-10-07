@@ -27,9 +27,9 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-[#839BE3]/95 backdrop-blur-md shadow-lg"
+          ? "bg-[#283971]/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -58,7 +58,7 @@ export default function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white px-4 py-2 rounded-md transition-all duration-300 font-medium hover:bg-white hover:text-[#839BE3] hover:shadow-md"
+                className="text-white px-4 py-2 rounded-md transition-all duration-300 font-medium hover:bg-white hover:text-[#283971] hover:shadow-md"
               >
                 {link.name}
               </a>
@@ -78,12 +78,12 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-[#839BE3]/95 backdrop-blur-md">
+          <div className="md:hidden py-4 bg-[#283971]/95 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 px-4 text-white hover:bg-white hover:text-[#839BE3] rounded-md transition-all duration-300 font-medium"
+                className="block py-3 px-4 text-white hover:bg-white hover:text-[#283971] rounded-md transition-all duration-300 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
