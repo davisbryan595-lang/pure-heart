@@ -28,7 +28,7 @@ export default function HeroSection() {
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance drop-shadow-[0_0_15px_rgba(0,0,0,0.4)]"
           >
             Next-Gen Greatness,{" "}
-            <span className="text-[#0D0A6C] drop-shadow-[0_0_15px_rgba(13,10,108,0.6)]">
+            <span className="text-[#0D0A6C] drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
               Fueled by Heart
             </span>
           </motion.h1>
