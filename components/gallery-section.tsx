@@ -8,7 +8,7 @@ import { X } from "lucide-react"
 
 const galleryImages = [
   {
-    url: "/pure.jpeg",
+    url: "/IMG_4211.jpg",
     alt: "Volleyball training session",
   },
   {
@@ -16,7 +16,7 @@ const galleryImages = [
     alt: "Basketball practice",
   },
   {
-    url: "/pure3.jpeg",
+    url: "/IMG_2635 4.JPG",
     alt: "Athletic training",
   },
   {
@@ -24,11 +24,11 @@ const galleryImages = [
     alt: "Team celebration",
   },
   {
-    url: "/pure5.jpeg",
+    url: "/Volleyball.jpg",
     alt: "Volleyball spike",
   },
   {
-    url: "/pureteam1.jpeg",
+    url: "/USAB & Rise Players.jpg",
     alt: "Basketball dribbling",
   },
 ]
