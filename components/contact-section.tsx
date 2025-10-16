@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react"
 
 export default function ContactSection() {
   const ref = useRef(null)
@@ -92,6 +92,46 @@ export default function ContactSection() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* LinkedIn */}
+              <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
+                <CardContent className="flex items-center gap-4 p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                    <a
+                      href="https://www.linkedin.com/in/lola-jones-baker-88925a382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors font-medium"
+                    >
+                      Connect on LinkedIn
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Instagram */}
+              <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
+                <CardContent className="flex items-center gap-4 p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Instagram className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">Instagram</p>
+                    <a
+                      href="https://www.instagram.com/3xhalloffamer?utm_source=qr&igsh=MWN0N3VrZ3E0dzQ4dA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors font-medium"
+                    >
+                      Follow @3xhalloffamer
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="flex gap-4 pt-4">
@@ -115,7 +155,7 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact Form via FormSubmit */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -128,7 +168,6 @@ export default function ContactSection() {
                   method="POST"
                   className="space-y-6"
                 >
-                  {/* FormSubmit hidden settings */}
                   <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_subject" value="New Contact Form Submission" />
@@ -144,26 +183,14 @@ export default function ContactSection() {
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      required
-                    />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
                   </div>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Phone
                     </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(123) 456-7890"
-                      required
-                    />
+                    <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
                   </div>
 
                   <div>
