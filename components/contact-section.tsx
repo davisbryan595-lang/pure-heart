@@ -1,10 +1,8 @@
 "use client"
 
-import type React from "react"
-
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,18 +12,6 @@ import { Mail, Phone, MapPin } from "lucide-react"
 export default function ContactSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Form submission logic would go here
-    console.log("Form submitted:", formData)
-  }
 
   return (
     <section id="contact" ref={ref} className="py-24 md:py-32 bg-background">
@@ -56,7 +42,7 @@ export default function ContactSection() {
               <h3 className="text-3xl font-bold text-foreground mb-6">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you're ready to sign up or just have questions, we're here to help. Reach out and let's discuss
-                how we can help you achieve your athletic goals.
+                how we can help you achieve your goals.
               </p>
             </div>
 
@@ -129,7 +115,7 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form via FormSubmit */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -137,20 +123,21 @@ export default function ContactSection() {
           >
             <Card className="glossy-card border-0 shadow-2xl">
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  action="https://formsubmit.co/Justoneminuteplease22@gmail.com"
+                  method="POST"
+                  className="space-y-6"
+                >
+                  {/* FormSubmit hidden settings */}
+                  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_subject" value="New Contact Form Submission" />
+
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Name
                     </label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="bg-background/50 border-border focus:border-primary"
-                    />
+                    <Input id="name" name="name" type="text" placeholder="Your name" required />
                   </div>
 
                   <div>
@@ -159,12 +146,10 @@ export default function ContactSection() {
                     </label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="your.email@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="bg-background/50 border-border focus:border-primary"
                     />
                   </div>
 
@@ -174,12 +159,10 @@ export default function ContactSection() {
                     </label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
                       placeholder="(123) 456-7890"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="bg-background/50 border-border focus:border-primary"
                     />
                   </div>
 
@@ -189,12 +172,11 @@ export default function ContactSection() {
                     </label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Tell us about your goals and how we can help..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
                       rows={5}
-                      className="bg-background/50 border-border focus:border-primary resize-none"
+                      required
+                      className="resize-none"
                     />
                   </div>
 
