@@ -20,7 +20,7 @@ const galleryImages = [
     alt: "Athletic training",
   },
   {
-    url: "/pure4.jpeg",
+    url: "/pureteam1.jpeg",
     alt: "Team celebration",
   },
   {
