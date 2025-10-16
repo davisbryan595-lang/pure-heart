@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import DonateModal from "@/components/DonateModal" // ✅ import the popup modal
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -63,6 +64,10 @@ export default function Navigation() {
                 {link.name}
               </a>
             ))}
+            {/* ✅ Donate Button Modal */}
+            <div className="ml-4">
+              <DonateModal />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,6 +94,11 @@ export default function Navigation() {
                 {link.name}
               </a>
             ))}
+
+            {/* ✅ Donate Modal for mobile */}
+            <div className="px-4 mt-3">
+              <DonateModal />
+            </div>
           </div>
         )}
       </div>
