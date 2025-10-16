@@ -16,7 +16,7 @@ const galleryImages = [
     alt: "Basketball practice",
   },
   {
-    url: "/IMG_2635 4.JPG",
+    url: "/gall3.JPG",
     alt: "Athletic training",
   },
   {
@@ -28,7 +28,7 @@ const galleryImages = [
     alt: "Volleyball spike",
   },
   {
-    url: "/USAB & Rise Players.jpg",
+    url: "/usa.jpg",
     alt: "Basketball dribbling",
   },
 ]
