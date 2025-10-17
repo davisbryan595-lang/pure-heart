@@ -23,13 +23,13 @@ const team = [
   {
     name: "Coach David Chen",
     role: "Athletic Performance Director",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
+    image: "/pure2.jpeg",
     bio: "Specializes in sports science and injury prevention",
   },
   {
     name: "Coach Emily Rodriguez",
     role: "Youth Development Coach",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
+    image: "/pure5.jpeg",
     bio: "Passionate about building fundamentals and confidence",
   },
 ]
