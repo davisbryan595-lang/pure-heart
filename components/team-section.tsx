@@ -11,7 +11,7 @@ const team = [
   {
     name: "Coach Marcus Johnson",
     role: "Head Basketball Coach",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+    image: "/t1.jpg",
     bio: "15+ years coaching experience with multiple championship titles",
   },
   {
