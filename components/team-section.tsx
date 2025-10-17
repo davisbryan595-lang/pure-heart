@@ -17,7 +17,7 @@ const team = [
   {
     name: "Coach Sarah Williams",
     role: "Head Volleyball Coach",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
+    image: "/t2.jpg",
     bio: "Former collegiate athlete and certified strength coach",
   },
   {
