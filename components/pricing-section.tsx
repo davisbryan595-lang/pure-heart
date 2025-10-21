@@ -141,20 +141,15 @@ export default function PricingSection() {
                 <CardContent className="space-y-4 pb-8">
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-start gap-3"
-                      >
+                      <li key={featureIndex} className="flex items-start gap-3">
                         <Check
                           className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
                             plan.popular ? "text-white" : "text-primary"
                           }`}
                         />
-                        <span
-                          className={`${
+                        <span className={`${
                             plan.popular ? "text-white/90" : "text-foreground"
-                          }`}
-                        >
+                          }`}>
                           {feature}
                         </span>
                       </li>
@@ -167,9 +162,7 @@ export default function PricingSection() {
                         : "bg-[#002B5B] hover:bg-[#00376b] text-white"
                     }`}
                     onClick={() =>
-                      document
-                        .getElementById("contact")
-                        ?.scrollIntoView({ behavior: "smooth" })
+                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                     }
                   >
                     Sign Up Now

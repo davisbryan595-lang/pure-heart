@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string)
 
 export default function DonateModal() {
-  const [amount, setAmount] = useState<number | "">(25)
+  const [amount, setAmount] = useState<number | "">("")
   const [loading, setLoading] = useState(false)
 
   
@@ -64,27 +64,12 @@ export default function DonateModal() {
           Every dollar helps young athletes grow, train, and compete with passion. 💪
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-6">
-          {presetAmounts.map((amt) => (
-            <Button
-              key={amt}
-              variant={amount === amt ? "default" : "outline"}
-              onClick={() => setAmount(amt)}
-              className={`px-6 py-2 rounded-full ${
-                amount === amt ? "bg-primary text-white" : "border-primary text-primary hover:bg-primary/10"
-              }`}
-            >
-              ${amt}
-            </Button>
-          ))}
-        </div>
-
         <div className="flex items-center justify-center gap-2 mb-6">
           <span className="text-foreground font-medium">$</span>
           <Input
             type="number"
             min="1"
-            placeholder="Custom amount"
+            placeholder="Enter amount"
             value={amount === "" ? "" : amount}
             onChange={(e) => setAmount(Number(e.target.value))}
             className="w-40 text-center border-primary/40 focus:border-primary rounded-full"

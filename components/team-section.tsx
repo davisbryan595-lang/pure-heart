@@ -9,28 +9,28 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const team = [
   {
-    name: "Coach Marcus Johnson",
-    role: "Head Basketball Coach",
+    name: "COACH JONES BAKER",
+    role: "Women’s Basketball, Volleyball & Personal Athlete Trainer",
     image: "/t1.jpg",
-    bio: "15+ years coaching experience with multiple championship titles",
+    bio: "2x All-American Champion • 3x Hall of Famer",
   },
   {
-    name: "Coach Sarah Williams",
-    role: "Head Volleyball Coach",
-    image: "/t2.jpg",
-    bio: "Former collegiate athlete and certified strength coach",
-  },
-  {
-    name: "Coach David Chen",
-    role: "Athletic Performance Director",
+    name: "COACH GRAY",
+    role: "CEO & Founder of Grayhound Group • Professional Athlete Trainer • Licensed Mental Health Therapist",
     image: "/pure2.jpeg",
-    bio: "Specializes in sports science and injury prevention",
+    bio: "Leadership and athlete development across disciplines",
   },
   {
-    name: "Coach Emily Rodriguez",
-    role: "Youth Development Coach",
+    name: "COACH MANNING",
+    role: "Former Harlem Globetrotter • Professional Athlete Trainer & Coach",
+    image: "/t2.jpg",
+    bio: "Elite-level skills training and mentorship",
+  },
+  {
+    name: "ALI DARROUGH",
+    role: "Executive Youth Sports Operator • Manager • Assistant Coach",
     image: "/pure5.jpeg",
-    bio: "Passionate about building fundamentals and confidence",
+    bio: "Program operations, team coordination, and athlete support",
   },
 ]
 
