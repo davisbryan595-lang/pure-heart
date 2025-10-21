@@ -16,6 +16,13 @@ const services = [
   },
   {
     icon: Users,
+    title: "Athletic Training — 1-on-1 & Team",
+    description:
+      "Personalized one-on-one coaching and high-energy team sessions focused on skill development, strategy, and confidence.",
+    image: "/Volleyball.jpg",
+  },
+  {
+    icon: Users,
     title: "Volleyball Training",
     description:
       "Expert coaching in all aspects of volleyball - serving, passing, setting, hitting, and defensive techniques for players at every level.",
