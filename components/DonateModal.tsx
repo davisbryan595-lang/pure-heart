@@ -13,6 +13,8 @@ export default function DonateModal() {
   const [amount, setAmount] = useState<number | "">("")
   const [loading, setLoading] = useState(false)
 
+  
+
   const handleDonate = async () => {
     if (!amount || Number(amount) < 1) return alert("Please enter a valid amount.")
     setLoading(true)
