@@ -9,17 +9,10 @@ import { Dumbbell, Users, Trophy } from "lucide-react"
 const services = [
   {
     icon: Dumbbell,
-    title: "Athletic & Basketball Training",
-    description:
-      "Comprehensive strength and conditioning to enhance performance, prevent injuries, and build athletic excellence — combined with focused basketball development in shooting, ball handling, defense, and game IQ.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    icon: Users,
     title: "Athletic Training — 1-on-1 & Team",
     description:
-      "Personalized one-on-one coaching and high-energy team sessions focused on skill development, strategy, and confidence.",
-    image: "/Volleyball.jpg",
+      "Comprehensive strength and conditioning programs designed to enhance performance, prevent injuries, and build athletic excellence. Personalized one-on-one coaching and high-energy team sessions focused on skill development, strategy, and confidence.",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
   },
   {
     icon: Users,
@@ -27,6 +20,13 @@ const services = [
     description:
       "Expert coaching in all aspects of volleyball - serving, passing, setting, hitting, and defensive techniques for players at every level.",
     image: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2007&auto=format&fit=crop",
+  },
+  {
+    icon: Trophy,
+    title: "Basketball Training",
+    description:
+      "Develop your basketball skills with focused training on shooting, ball handling, defense, and game IQ from experienced coaches.",
+    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2090&auto=format&fit=crop",
   },
 ]
 
