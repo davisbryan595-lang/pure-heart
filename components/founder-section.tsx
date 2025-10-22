@@ -46,15 +46,15 @@ export default function FounderSection() {
             <p className="text-[#0F172A] font-medium mb-6">Founder & Head Coach</p>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Pure Heart Athletics was founded on a simple belief: greatness is built from the inside out. We train the whole
-                athlete — mind, body, and character — so performance rises with purpose.
+                Women’s Basketball, Volleyball & Personal Athlete Trainer
+                2x All-American Champion • 3x Hall of Famer
               </p>
               <p>
-                With decades of combined coaching and player development, our leadership brings a relentless commitment to
-                fundamentals, skill progression, and confidence. Every session is designed to build discipline, resilience, and love for the game.
+                Lola Jones Baker’s legacy in Rowan County athletics is built on excellence, discipline, and faith. A proud alumna of North Rowan High School, Lola made history as the Rowan County Player of the Year and a member of the All-Rowan County First Team. Her exceptional performance on the court, combined with her leadership and dedication, set a standard for athletes across the county.
+                Beyond basketball, Lola also shined in volleyball, showcasing her versatility and commitment to sports. Today, as a personal athlete trainer, she continues to uplift and inspire others—helping young athletes strengthen not only their physical abilities but also their character and confidence.
               </p>
               <p>
-                From first-time players to elite competitors, our programs meet athletes where they are and elevate them to the next level.
+                Lola Jones Baker remains a symbol of determination, faith, and achievement — a Rowan County legend whose legacy continues to inspire generations.
               </p>
             </div>
             <motion.blockquote
