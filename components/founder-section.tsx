@@ -63,7 +63,7 @@ export default function FounderSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-10 max-w-3xl mx-auto text-center text-white/90 italic"
           >
-            <span className="inline-block border-l-4 border-[#0F172A] pl-4 text-balance">
+            <span className="inline-block border-l-4 border-[#0F172A] pl-4 text-black">
               “You did not make Me” “You can Not Break Me”
             </span>
           </motion.blockquote>
