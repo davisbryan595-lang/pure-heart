@@ -1,6 +1,7 @@
 import NavigationBar from "@/components/navigation"
 import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
+import FounderSection from "@/components/founder-section"
 import ServicesSection from "@/components/services-section"
 import TeamSection from "@/components/team-section"
 import GallerySection from "@/components/gallery-section"
@@ -14,6 +15,7 @@ export default function Home() {
       <NavigationBar />
       <HeroSection />
       <AboutSection />
+      <FounderSection />
       <ServicesSection />
       <TeamSection />
       <GallerySection />
