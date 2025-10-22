@@ -71,6 +71,17 @@ export default function AboutSection() {
             all levels. Our experienced coaches are dedicated to fostering excellence, discipline, and a genuine love
             for the game.
           </p>
+
+          <motion.blockquote
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-10 max-w-3xl mx-auto text-center text-white/90 italic"
+          >
+            <span className="inline-block border-l-4 border-[#0F172A] pl-4 text-balance">
+              “You did not make Me” “You can Not Break Me”
+            </span>
+          </motion.blockquote>
         </motion.div>
 
         {/* Stats with animated count-up */}
