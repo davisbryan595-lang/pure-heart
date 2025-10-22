@@ -33,7 +33,7 @@ export default function FounderSection() {
           >
             <div
               className="h-[380px] bg-cover bg-center"
-              style={{ backgroundImage: `url(/pure2.jpeg)` }}
+              style={{ backgroundImage: `url(/lola.jpg)` }}
             />
           </motion.div>
 
