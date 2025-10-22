@@ -42,7 +42,7 @@ export default function FounderSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Coach Gray</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Lola Jones</h3>
             <p className="text-[#0F172A] font-medium mb-6">Founder & Head Coach</p>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
