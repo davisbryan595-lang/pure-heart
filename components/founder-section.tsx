@@ -57,6 +57,16 @@ export default function FounderSection() {
                 From first-time players to elite competitors, our programs meet athletes where they are and elevate them to the next level.
               </p>
             </div>
+            <motion.blockquote
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-10 max-w-3xl mx-auto text-center text-white/90 italic"
+          >
+            <span className="inline-block border-l-4 border-[#0F172A] pl-4 text-balance">
+              “You did not make Me” “You can Not Break Me”
+            </span>
+          </motion.blockquote>
           </motion.div>
         </div>
       </div>
