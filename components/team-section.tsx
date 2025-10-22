@@ -17,7 +17,7 @@ const team = [
   {
     name: "COACH GRAY",
     role: "CEO & Founder of Grayhound Group • Professional Athlete Trainer • Licensed Mental Health Therapist",
-    image: "/gray.jpg",
+    image: "/Gray.jpg",
     bio: "Leadership and athlete development across disciplines",
   },
   {
