@@ -11,25 +11,25 @@ const team = [
   {
     name: "COACH JONES BAKER",
     role: "Women’s Basketball, Volleyball & Personal Athlete Trainer",
-    image: "/t1.jpg",
+    image: "/lola.jpg",
     bio: "2x All-American Champion • 3x Hall of Famer",
   },
   {
     name: "COACH GRAY",
     role: "CEO & Founder of Grayhound Group • Professional Athlete Trainer • Licensed Mental Health Therapist",
-    image: "/pure2.jpeg",
+    image: "/gray.jpg",
     bio: "Leadership and athlete development across disciplines",
   },
   {
     name: "COACH MANNING",
     role: "Former Harlem Globetrotter • Professional Athlete Trainer & Coach",
-    image: "/t2.jpg",
+    image: "/manning.jpg",
     bio: "Elite-level skills training and mentorship",
   },
   {
     name: "ALI DARROUGH",
     role: "Executive Youth Sports Operator • Manager • Assistant Coach",
-    image: "/pure5.jpeg",
+    image: "/ALI.jpg",
     bio: "Program operations, team coordination, and athlete support",
   },
 ]
