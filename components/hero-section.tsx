@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-0 brightness-75"
         style={{
-          backgroundImage: "url('/hbg.jpg')",
+          backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F63a7e19cfd924af391aef55c79bda403?format=webp&width=800')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
