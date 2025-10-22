@@ -9,17 +9,10 @@ import { Dumbbell, Users, Trophy } from "lucide-react"
 const services = [
   {
     icon: Dumbbell,
-    title: "Athletic Training",
-    description:
-      "Comprehensive strength and conditioning programs designed to enhance performance, prevent injuries, and build athletic excellence.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    icon: Users,
     title: "Athletic Training — 1-on-1 & Team",
     description:
-      "Personalized one-on-one coaching and high-energy team sessions focused on skill development, strategy, and confidence.",
-    image: "/Volleyball.jpg",
+      "Comprehensive strength and conditioning programs designed to enhance performance, prevent injuries, and build athletic excellence. Personalized one-on-one coaching and high-energy team sessions focused on skill development, strategy, and confidence.",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
   },
   {
     icon: Users,

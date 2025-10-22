@@ -79,12 +79,11 @@ export default function TeamSection() {
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2"
                     style={{ backgroundImage: `url(${member.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-[#0F172A] text-sm font-medium mb-2">{member.role}</p>
-                    <p className="text-sm text-white/80 leading-relaxed">{member.bio}</p>
-                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-[#0F172A] text-sm font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
                 </div>
               </Card>
             </motion.div>
@@ -104,12 +103,11 @@ export default function TeamSection() {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${team[currentIndex].image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent opacity-90" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{team[currentIndex].name}</h3>
-                  <p className="text-[#0F172A] text-base font-medium mb-3">{team[currentIndex].role}</p>
-                  <p className="text-base text-white/90 leading-relaxed">{team[currentIndex].bio}</p>
-                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-2">{team[currentIndex].name}</h3>
+                <p className="text-[#0F172A] text-base font-medium mb-3">{team[currentIndex].role}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{team[currentIndex].bio}</p>
               </div>
             </Card>
           </motion.div>
