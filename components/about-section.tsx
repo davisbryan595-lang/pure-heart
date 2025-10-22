@@ -82,7 +82,7 @@ export default function AboutSection() {
         >
           {[
             { number: "500+", label: "Athletes Trained" },
-            { number: "15+", label: "Years Experience" },
+            { number: "30+", label: "Years Experience" },
             { number: "50+", label: "Championships Won" },
             { number: "100%", label: "Dedication" },
           ].map((stat, index) => (
