@@ -76,7 +76,9 @@ export default function TeamSection() {
               <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-[#0F172A]/20 transition-all duration-500 bg-card">
                 <div className="relative h-80 overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2"
+                    className={`absolute inset-0 bg-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2 ${
+                      index === 1 || index === 3 ? "bg-[position:center_20%]" : "bg-center"
+                    }`}
                     style={{ backgroundImage: `url(${member.image})` }}
                   />
                 </div>
@@ -100,7 +102,9 @@ export default function TeamSection() {
             <Card className="overflow-hidden border-0 shadow-2xl bg-card">
               <div className="relative h-96">
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
+                  className={`absolute inset-0 bg-cover ${
+                    currentIndex === 1 || currentIndex === 3 ? "bg-[position:center_20%]" : "bg-center"
+                  }`}
                   style={{ backgroundImage: `url(${team[currentIndex].image})` }}
                 />
               </div>
