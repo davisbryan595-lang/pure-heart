@@ -77,7 +77,7 @@ export default function TeamSection() {
                 <div className="relative h-80 overflow-hidden">
                   <div
                     className={`absolute inset-0 bg-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2 ${
-                      index === 1 || index === 3 ? "bg-[position:center_20%]" : "bg-center"
+                      index === 1 || index === 3 ? "bg-[position:center_25%]" : "bg-center"
                     }`}
                     style={{ backgroundImage: `url(${member.image})` }}
                   />
