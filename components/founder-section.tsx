@@ -127,6 +127,26 @@ export default function FounderSection() {
                       </motion.div>
                     </div>
                   </div>
+
+                  <div className="mt-12 flex justify-center">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.2 }}
+                      className="w-full max-w-2xl"
+                    >
+                      <div className="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F89eb0daf96614f2095cf5fee0ecf797c?format=webp&width=800"
+                          alt="Lola Jones Baker with Dr. Jo-Ann Robinson and Spud Webb at Fincastle on the Mountain"
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-muted-foreground italic">
+                        Lola Jones Baker, a former student at Bluefield State College, and Dr. Jo-Ann Robinson, vice president of Student Affairs and Enrollment Management, speak with former NBA star 'Spud' Webb at Fincastle on the Mountain during 'An Evening with Bluefield State.'
+                      </p>
+                    </motion.div>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
