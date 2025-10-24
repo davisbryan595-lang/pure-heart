@@ -1,11 +1,13 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion, useInView, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react"
+import { ChevronDown } from "lucide-react"
 
 export default function FounderSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <section id="founder" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
