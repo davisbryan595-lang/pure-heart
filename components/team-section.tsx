@@ -103,7 +103,7 @@ export default function TeamSection() {
               <div className="relative h-96">
                 <div
                   className={`absolute inset-0 bg-cover ${
-                    currentIndex === 1 || currentIndex === 3 ? "bg-[position:center_20%]" : "bg-center"
+                    currentIndex === 1 || currentIndex === 3 ? "bg-[position:center_25%]" : "bg-center"
                   }`}
                   style={{ backgroundImage: `url(${team[currentIndex].image})` }}
                 />
