@@ -112,7 +112,7 @@ export default function FounderSection() {
                       NGC prepared Lola for the next level of basketball as she transferred to Bluefield State in West Virginia and became a two-time NALA All-American (First Team in 1993 and a Second Team in 1994). She was the West Virginia Intercollegiate Athletic Conference's Player of the Year both years and led the conference in scoring both seasons, averaging 25.5 points and 15.7 rebounds as a senior. She also was named to the WVIAC 25 at 25 All-Time Women's Basketball Team.
                     </p>
                     <p>
-                      Lola resides in Winston-Salem, NC and is a Public Safety Officer for the Forsyth Medical Center. She is married to T. Baker and has two children, Danielle and Zachery.
+                      Lola, originally from Davie, began her basketball legacy in Rowan County and now resides in Winston-Salem, NC, where she serves as a Public Safety Officer for the Forsyth Medical Center. She is married to T. Baker and has two children, Danielle and Zachery.
                     </p>
                   </div>
                   <div className="flex justify-center items-start">
