@@ -106,7 +106,7 @@ export default function FounderSection() {
                       A highly talented star from the North Greenville junior college days, Lola Jones Baker was a junior college All-Region selection her sophomore year of 1992, and also made All-Western Carolinas Junior College All-Conference. Lola averaged 15 points and 10 rebounds per game her sophomore year and had 12 points and 8 rebounds as a freshman.
                     </p>
                     <p>
-                      Lola was recruited to NGC out of Salisbury, NC and "blossomed the second half of her freshman season," according to head coach Jane Ariedge. "Lola became a dominant post player for us and had numerous games over 30 points. She played the backline on our press and had a lot of steals. She was a very, very good defender."
+                      Lola was recruited to NGC out of Salisbury, NC and "blossomed the second half of her freshman season," according to head coach Jane Arledge. "Lola became a dominant post player for us and had numerous games over 30 points. She played the backline on our press and had a lot of steals. She was a very, very good defender."
                     </p>
                     <p>
                       NGC prepared Lola for the next level of basketball as she transferred to Bluefield State in West Virginia and became a two-time NALA All-American (First Team in 1993 and a Second Team in 1994). She was the West Virginia Intercollegiate Athletic Conference's Player of the Year both years and led the conference in scoring both seasons, averaging 25.5 points and 15.7 rebounds as a senior. She also was named to the WVIAC 25 at 25 All-Time Women's Basketball Team.
