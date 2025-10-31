@@ -72,10 +72,10 @@ export default function ContactSection() {
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Phone</p>
                     <a
-                      href="tel:3369807111"
+                      href="tel:3364071050"
                       className="text-foreground hover:text-primary transition-colors font-medium"
                     >
-                      (336) 980-7111
+                      (336) 407-1050
                     </a>
                   </div>
                 </CardContent>
