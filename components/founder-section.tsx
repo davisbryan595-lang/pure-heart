@@ -123,7 +123,7 @@ export default function FounderSection() {
                       className="overflow-hidden rounded-xl shadow-lg max-w-sm w-full"
                     >
                       <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F0b036d799f76443a83b50e58332dab60?format=webp&width=800"
+                        src="/uni2.jpg"
                         alt="Lola Jones Baker - North Greenville University Athletic Hall of Fame"
                         className="w-full h-auto object-cover"
                       />
