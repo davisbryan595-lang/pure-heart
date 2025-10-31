@@ -2,18 +2,19 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion"
 import { useRef, useState } from "react"
-import { ChevronDown, FileText, X } from "lucide-react"
+import { ChevronDown, Image as ImageIcon, X } from "lucide-react"
 
 export default function FounderSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [isExpanded, setIsExpanded] = useState(false)
-  const [showPdf, setShowPdf] = useState(false)
+  const [showCert, setShowCert] = useState(false)   // <-- image modal
 
   return (
     <section id="founder" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
+
+        {/* ----- Header ----- */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -28,7 +29,7 @@ export default function FounderSection() {
           </p>
         </motion.div>
 
-        {/* Main Grid */}
+        {/* ----- Main Grid ----- */}
         <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
           {/* Image */}
           <motion.div
@@ -51,6 +52,7 @@ export default function FounderSection() {
           >
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Lola Jones</h3>
             <p className="text-[#0F172A] font-medium mb-6">Founder & Head Coach</p>
+
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Women's Basketball, Volleyball & Personal Athlete Trainer
@@ -77,7 +79,7 @@ export default function FounderSection() {
               </span>
             </motion.blockquote>
 
-            {/* Learn More Button */}
+            {/* Learn More */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
               initial={{ opacity: 0, y: 10 }}
@@ -94,7 +96,7 @@ export default function FounderSection() {
           </motion.div>
         </div>
 
-        {/* PDF CERTIFICATION BUTTON - BEFORE EXPANDED CONTENT */}
+        {/* ----- CERTIFICATION IMAGE BADGE (BEFORE EXPANDED) ----- */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -102,17 +104,17 @@ export default function FounderSection() {
           className="text-center mt-12"
         >
           <motion.button
-            onClick={() => setShowPdf(true)}
+            onClick={() => setShowCert(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <FileText size={24} />
-            View Official Certification
+            <ImageIcon size={24} />
+            View Certification Badge
           </motion.button>
         </motion.div>
 
-        {/* EXPANDED CONTENT */}
+        {/* ----- EXPANDED CONTENT ----- */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -123,6 +125,7 @@ export default function FounderSection() {
               className="mt-8 overflow-hidden"
             >
               <div className="max-w-6xl mx-auto px-4 pt-8 border-t border-muted-foreground/20">
+                {/* … your existing expanded content … */}
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <div>
@@ -179,39 +182,38 @@ export default function FounderSection() {
         </AnimatePresence>
       </div>
 
-      {/* PDF MODAL */}
+      {/* ----- IMAGE LIGHTBOX ----- */}
       <AnimatePresence>
-        {showPdf && (
+        {showCert && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-            onClick={() => setShowPdf(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            onClick={() => setShowCert(false)}
           >
             <motion.div
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="relative bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+              className="relative max-w-3xl w-full bg-white rounded-xl shadow-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
+              {/* Close */}
               <button
-                onClick={() => setShowPdf(false)}
+                onClick={() => setShowCert(false)}
                 className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
-                aria-label="Close PDF"
+                aria-label="Close certification image"
               >
                 <X size={24} className="text-gray-800" />
               </button>
 
-              {/* PDF Viewer */}
-              <iframe
-                src="/certification.pdf#toolbar=1&navpanes=0&scrollbar=1&view=FitH"
-                className="w-full h-[80vh]"
-                title="Official Certification"
-                frameBorder="0"
+              {/* Image */}
+              <img
+                src="/certified.png"
+                alt="Certification Badge"
+                className="w-full h-auto max-h-[85vh] object-contain"
               />
             </motion.div>
           </motion.div>
