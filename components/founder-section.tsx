@@ -2,16 +2,18 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion"
 import { useRef, useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, FileText, X } from "lucide-react"
 
 export default function FounderSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [isExpanded, setIsExpanded] = useState(false)
+  const [showPdf, setShowPdf] = useState(false)
 
   return (
     <section id="founder" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -26,7 +28,9 @@ export default function FounderSection() {
           </p>
         </motion.div>
 
+        {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -39,6 +43,7 @@ export default function FounderSection() {
             />
           </motion.div>
 
+          {/* Bio */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -59,6 +64,8 @@ export default function FounderSection() {
                 Lola Jones Baker remains a symbol of determination, faith, and achievement — a Rowan County legend whose legacy continues to inspire generations.
               </p>
             </div>
+
+            {/* Quote */}
             <motion.blockquote
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -70,6 +77,7 @@ export default function FounderSection() {
               </span>
             </motion.blockquote>
 
+            {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
               initial={{ opacity: 0, y: 10 }}
@@ -86,6 +94,25 @@ export default function FounderSection() {
           </motion.div>
         </div>
 
+        {/* PDF CERTIFICATION BUTTON - BEFORE EXPANDED CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <motion.button
+            onClick={() => setShowPdf(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <FileText size={24} />
+            View Official Certification
+          </motion.button>
+        </motion.div>
+
+        {/* EXPANDED CONTENT */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -151,6 +178,45 @@ export default function FounderSection() {
           )}
         </AnimatePresence>
       </div>
+
+      {/* PDF MODAL */}
+      <AnimatePresence>
+        {showPdf && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+            onClick={() => setShowPdf(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="relative bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowPdf(false)}
+                className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
+                aria-label="Close PDF"
+              >
+                <X size={24} className="text-gray-800" />
+              </button>
+
+              {/* PDF Viewer */}
+              <iframe
+                src="/certification.pdf#toolbar=1&navpanes=0&scrollbar=1&view=FitH"
+                className="w-full h-[80vh]"
+                title="Official Certification"
+                frameBorder="0"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
