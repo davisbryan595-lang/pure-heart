@@ -8,10 +8,12 @@ import GallerySection from "@/components/gallery-section"
 import PricingSection from "@/components/pricing-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import EventPopupModal from "@/components/EventPopupModal"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <EventPopupModal />
       <NavigationBar />
       <HeroSection />
       <AboutSection />
