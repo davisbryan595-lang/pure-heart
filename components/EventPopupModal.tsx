@@ -84,7 +84,7 @@ export default function EventPopupModal() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
