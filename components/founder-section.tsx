@@ -183,7 +183,7 @@ export default function FounderSection() {
         </AnimatePresence>
       </div>
 
-      {/* ----- IMAGE LIGHTBOX ----- */}
+      {/* ----- CERTIFICATION MODAL ----- */}
       <AnimatePresence>
         {showCert && (
           <motion.div
@@ -205,17 +205,52 @@ export default function FounderSection() {
               <button
                 onClick={() => setShowCert(false)}
                 className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
-                aria-label="Close certification image"
+                aria-label="Close certification modal"
               >
                 <X size={24} className="text-gray-800" />
               </button>
 
-              {/* Image */}
-              <img
-                src="/certified.png"
-                alt="Certification Badge"
-                className="w-full h-auto max-h-[85vh] object-contain"
-              />
+              {/* Tabs */}
+              <div className="flex border-b border-gray-200">
+                <button
+                  onClick={() => setCertTab('image')}
+                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                    certTab === 'image'
+                      ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
+                      : 'bg-gray-50 text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  Certification Badge
+                </button>
+                <button
+                  onClick={() => setCertTab('pdf')}
+                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                    certTab === 'pdf'
+                      ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
+                      : 'bg-gray-50 text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  All Certifications
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="overflow-auto max-h-[85vh]">
+                {certTab === 'image' && (
+                  <img
+                    src="/certified.png"
+                    alt="Certification Badge"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
+                {certTab === 'pdf' && (
+                  <iframe
+                    src="/Cerfication .pdf"
+                    className="w-full h-[85vh]"
+                    title="All Certifications PDF"
+                  />
+                )}
+              </div>
             </motion.div>
           </motion.div>
         )}
