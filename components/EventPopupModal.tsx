@@ -20,16 +20,6 @@ const events = [
 export default function EventPopupModal() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
-  const [hasSeenModal, setHasSeenModal] = useState(false)
-
-  useEffect(() => {
-    // Check if user has already seen the modal this session
-    const seen = sessionStorage.getItem("eventModalSeen")
-    if (seen) {
-      setIsVisible(false)
-      setHasSeenModal(true)
-    }
-  }, [])
 
   useEffect(() => {
     if (!isVisible) return
