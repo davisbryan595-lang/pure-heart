@@ -9,6 +9,7 @@ export default function FounderSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [isExpanded, setIsExpanded] = useState(false)
   const [showCert, setShowCert] = useState(false)   // <-- image modal
+  const [certTab, setCertTab] = useState<'image' | 'pdf'>('image') // <-- tab state for cert modal
 
   return (
     <section id="founder" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
