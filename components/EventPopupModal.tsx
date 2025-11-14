@@ -43,7 +43,6 @@ export default function EventPopupModal() {
 
   const handleClose = () => {
     setIsVisible(false)
-    sessionStorage.setItem("eventModalSeen", "true")
   }
 
   const goToSlide = (index: number) => {
