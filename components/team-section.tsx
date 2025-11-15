@@ -48,24 +48,24 @@ export default function TeamSection() {
   }
 
   return (
-    <section id="team" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-background to-muted">
-      <div className="container mx-auto px-4">
+    <section id="team" ref={ref} className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-14 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4">
             Meet the <span className="text-[#0F172A]">Team</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Expert coaches dedicated to your success
           </p>
         </motion.div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -73,8 +73,8 @@ export default function TeamSection() {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-[#0F172A]/20 transition-all duration-500 bg-card">
-                <div className="relative h-80 overflow-hidden">
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-[#0F172A]/20 transition-all duration-500 bg-card h-full flex flex-col">
+                <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden">
                   <div
                     className={`absolute inset-0 bg-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2 ${
                       index === 1 ? "bg-[position:center_10%]" : index === 3 ? "bg-[position:center_10%]" : "bg-center"
@@ -82,10 +82,12 @@ export default function TeamSection() {
                     style={{ backgroundImage: `url(${member.image})` }}
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-[#0F172A] text-sm font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
+                <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                    <p className="text-[#0F172A] text-xs sm:text-sm font-medium mb-2">{member.role}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -93,14 +95,14 @@ export default function TeamSection() {
         </div>
 
         {/* Mobile Carousel */}
-        <div className="md:hidden relative max-w-sm mx-auto">
+        <div className="sm:hidden relative w-full max-w-xs mx-auto px-2">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5 }}
           >
             <Card className="overflow-hidden border-0 shadow-2xl bg-card">
-              <div className="relative h-96">
+              <div className="relative h-80 sm:h-96">
                 <div
                   className={`absolute inset-0 bg-cover ${
                     currentIndex === 1 ? "bg-[position:center_10%]" : currentIndex === 3 ? "bg-[position:center_20%]" : "bg-center"
@@ -108,20 +110,20 @@ export default function TeamSection() {
                   style={{ backgroundImage: `url(${team[currentIndex].image})` }}
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{team[currentIndex].name}</h3>
-                <p className="text-[#0F172A] text-base font-medium mb-3">{team[currentIndex].role}</p>
-                <p className="text-base text-muted-foreground leading-relaxed">{team[currentIndex].bio}</p>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">{team[currentIndex].name}</h3>
+                <p className="text-[#0F172A] text-sm sm:text-base font-medium mb-3">{team[currentIndex].role}</p>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{team[currentIndex].bio}</p>
               </div>
             </Card>
           </motion.div>
 
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-5 sm:mt-6">
             <Button
               variant="outline"
               size="icon"
               onClick={prevSlide}
-              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white"
+              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white w-10 h-10"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -129,7 +131,7 @@ export default function TeamSection() {
               variant="outline"
               size="icon"
               onClick={nextSlide}
-              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white"
+              className="rounded-full bg-[#0F172A]/10 border-[#0F172A]/30 hover:bg-[#0F172A] hover:text-white w-10 h-10"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>

@@ -12,35 +12,35 @@ export default function FounderSection() {
   const [certTab, setCertTab] = useState<'image' | 'pdf'>('image') // <-- tab state for cert modal
 
   return (
-    <section id="founder" ref={ref} className="py-24 md:py-32 bg-gradient-to-b from-muted to-background">
-      <div className="container mx-auto px-4">
+    <section id="founder" ref={ref} className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-muted to-background">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
 
         {/* ----- Header ----- */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-14 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4">
             Our <span className="text-[#0F172A]">Founder</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             The vision and values behind Pure Heart Athletics
           </p>
         </motion.div>
 
         {/* ----- Main Grid ----- */}
-        <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start max-w-6xl mx-auto">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="overflow-hidden rounded-xl shadow-lg"
+            className="overflow-hidden rounded-lg sm:rounded-xl shadow-lg"
           >
             <div
-              className="h-[380px] bg-cover bg-center"
+              className="h-64 sm:h-80 md:h-[380px] bg-cover bg-center"
               style={{ backgroundImage: `url(/lola.jpg)` }}
             />
           </motion.div>
@@ -51,10 +51,10 @@ export default function FounderSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Lola Jones</h3>
-            <p className="text-[#0F172A] font-medium mb-6">Founder & Head Coach</p>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-3">Lola Jones</h3>
+            <p className="text-[#0F172A] font-medium mb-4 sm:mb-6 text-sm sm:text-base">Founder & Head Coach</p>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
               <p>
                 Women's Basketball, Volleyball & Personal Athlete Trainer
                 2x All-American Champion • 3x Hall of Famer
@@ -73,9 +73,9 @@ export default function FounderSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-10 max-w-3xl mx-auto text-center text-white/90 italic"
+              className="mt-6 sm:mt-10 max-w-3xl text-center text-gray-700 italic text-sm sm:text-base"
             >
-              <span className="inline-block border-l-4 border-[#0F172A] pl-4 text-black">
+              <span className="inline-block border-l-4 border-[#0F172A] pl-4">
                 "You did not make Me" "You can Not Break Me"
               </span>
             </motion.blockquote>
@@ -86,11 +86,11 @@ export default function FounderSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#0F172A] hover:bg-[#1a2340] text-white rounded-lg font-medium transition-colors"
+              className="mt-6 sm:mt-8 inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-3 bg-[#0F172A] hover:bg-[#1a2340] text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
             >
               Learn More
               <ChevronDown
-                size={20}
+                size={18}
                 className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
               />
             </motion.button>
@@ -102,15 +102,15 @@ export default function FounderSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-10 sm:mt-12"
         >
           <motion.button
             onClick={() => setShowCert(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-lg sm:rounded-xl font-semibold text-sm sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <ImageIcon size={24} />
+            <ImageIcon size={20} className="sm:w-6 sm:h-6" />
             View Certification Badge
           </motion.button>
         </motion.div>
@@ -123,15 +123,15 @@ export default function FounderSection() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4 }}
-              className="mt-8 overflow-hidden"
+              className="mt-6 sm:mt-8 overflow-hidden"
             >
-              <div className="max-w-6xl mx-auto px-4 pt-8 border-t border-muted-foreground/20">
+              <div className="max-w-6xl mx-auto pt-6 sm:pt-8 border-t border-muted-foreground/20">
                 {/* … your existing expanded content … */}
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                  <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-12">
+                  <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
                     <div>
-                      <h4 className="text-lg font-semibold text-[#0F172A] mb-2">North Greenville University Athletic Hall of Fame</h4>
-                      <p className="text-sm text-muted-foreground mb-3">October 25, 2008</p>
+                      <h4 className="text-base sm:text-lg font-semibold text-[#0F172A] mb-1 sm:mb-2">North Greenville University Athletic Hall of Fame</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">October 25, 2008</p>
                     </div>
                     <p>
                       A highly talented star from the North Greenville junior college days, Lola Jones Baker was a junior college All-Region selection her sophomore year of 1992, and also made All-Western Carolinas Junior College All-Conference. Lola averaged 15 points and 10 rebounds per game her sophomore year and had 12 points and 8 rebounds as a freshman.
@@ -151,7 +151,7 @@ export default function FounderSection() {
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.1 }}
-                      className="overflow-hidden rounded-xl shadow-lg max-w-sm w-full"
+                      className="overflow-hidden rounded-lg sm:rounded-xl shadow-lg max-w-sm w-full"
                     >
                       <img
                         src="/uni2.jpg"
@@ -166,14 +166,14 @@ export default function FounderSection() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.2 }}
-                  className="overflow-hidden rounded-xl shadow-lg"
+                  className="overflow-hidden rounded-lg sm:rounded-xl shadow-lg"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F89eb0daf96614f2095cf5fee0ecf797c?format=webp&width=800"
                     alt="Lola Jones Baker with Dr. Jo-Ann Robinson and Spud Webb at Fincastle on the Mountain"
                     className="w-full h-auto object-cover"
                   />
-                  <p className="p-4 text-center text-sm text-muted-foreground italic bg-muted">
+                  <p className="p-3 sm:p-4 text-center text-xs sm:text-sm text-muted-foreground italic bg-muted">
                     Lola Jones Baker, a former student at Bluefield State College, and Dr. Jo-Ann Robinson, vice president of Student Affairs and Enrollment Management, speak with former NBA star 'Spud' Webb at Fincastle on the Mountain during 'An Evening with Bluefield State.'
                   </p>
                 </motion.div>
@@ -190,7 +190,7 @@ export default function FounderSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-3 sm:p-4"
             onClick={() => setShowCert(false)}
           >
             <motion.div
@@ -198,23 +198,23 @@ export default function FounderSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="relative max-w-3xl w-full bg-white rounded-xl shadow-2xl overflow-hidden"
+              className="relative w-full max-w-3xl bg-white rounded-lg sm:rounded-xl shadow-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close */}
               <button
                 onClick={() => setShowCert(false)}
-                className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 p-1 sm:p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
                 aria-label="Close certification modal"
               >
-                <X size={24} className="text-gray-800" />
+                <X size={20} className="sm:w-6 sm:h-6 text-gray-800" />
               </button>
 
               {/* Tabs */}
               <div className="flex border-b border-gray-200">
                 <button
                   onClick={() => setCertTab('image')}
-                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
                     certTab === 'image'
                       ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
                       : 'bg-gray-50 text-gray-600 hover:text-gray-800'
@@ -224,7 +224,7 @@ export default function FounderSection() {
                 </button>
                 <button
                   onClick={() => setCertTab('pdf')}
-                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
                     certTab === 'pdf'
                       ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
                       : 'bg-gray-50 text-gray-600 hover:text-gray-800'
@@ -235,7 +235,7 @@ export default function FounderSection() {
               </div>
 
               {/* Content */}
-              <div className="overflow-auto max-h-[85vh]">
+              <div className="overflow-auto max-h-[calc(100vh-200px)] sm:max-h-[85vh]">
                 {certTab === 'image' && (
                   <img
                     src="/certified.png"
@@ -246,7 +246,7 @@ export default function FounderSection() {
                 {certTab === 'pdf' && (
                   <iframe
                     src="/Cerfication .pdf"
-                    className="w-full h-[85vh]"
+                    className="w-full h-[calc(100vh-200px)] sm:h-[85vh]"
                     title="All Certifications PDF"
                   />
                 )}

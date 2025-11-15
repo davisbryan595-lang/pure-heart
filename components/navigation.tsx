@@ -32,17 +32,17 @@ export default function Navigation() {
         isScrolled ? "bg-[#283971]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 relative group">
+          <a href="#home" className="flex items-center space-x-2 relative group flex-shrink-0">
             <div className="relative">
               <Image
                 src="/plogo.png"
                 alt="Pure Heart Athletics"
                 width={350}
                 height={200}
-                className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
+                className="h-16 sm:h-20 md:h-28 w-auto transition-transform duration-500 group-hover:scale-105"
               />
               {/* Glossy Shine Overlay */}
               <div className="absolute inset-0 rounded-md overflow-hidden pointer-events-none">
@@ -52,18 +52,18 @@ export default function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white px-4 py-2 rounded-md transition-all duration-300 font-medium hover:bg-white hover:text-[#283971] hover:shadow-md"
+                className="text-white px-3 xl:px-4 py-2 rounded-md transition-all duration-300 font-medium text-sm xl:text-base hover:bg-white hover:text-[#283971] hover:shadow-md"
               >
                 {link.name}
               </a>
             ))}
             {/* ✅ Donate Button Modal */}
-            <div className="ml-4">
+            <div className="ml-3 xl:ml-4">
               <DonateModal />
             </div>
           </div>
@@ -72,21 +72,21 @@ export default function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white"
+            className="lg:hidden text-white w-10 h-10 sm:w-11 sm:h-11"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-[#283971]/95 backdrop-blur-md">
+          <div className="lg:hidden py-3 sm:py-4 bg-[#283971]/95 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 px-4 text-white hover:bg-white hover:text-[#283971] rounded-md transition-all duration-300 font-medium"
+                className="block py-2 sm:py-3 px-3 sm:px-4 text-white hover:bg-white hover:text-[#283971] rounded-md transition-all duration-300 font-medium text-sm sm:text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -94,7 +94,7 @@ export default function Navigation() {
             ))}
 
             {/* ✅ Donate Modal for mobile */}
-            <div className="px-4 mt-3">
+            <div className="px-3 sm:px-4 mt-2 sm:mt-3">
               <DonateModal />
             </div>
           </div>

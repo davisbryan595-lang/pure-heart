@@ -15,48 +15,48 @@ export default function ContactSection() {
 
   return (
     <section id="contact" ref={ref} className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-14 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4">
             Get in <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to start your journey? Contact us today
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">Let's Connect</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Let's Connect</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 sm:mb-8">
                 Whether you're ready to sign up or just have questions, we're here to help. Reach out and let's discuss
                 how we can help you achieve your goals.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Email</p>
                     <a
                       href="mailto:Justoneminuteplease22@gmail.com"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm break-all"
                     >
                       Justoneminuteplease22@gmail.com
                     </a>
@@ -65,15 +65,15 @@ export default function ContactSection() {
               </Card>
 
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Phone</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Phone</p>
                     <a
                       href="tel:3364071050"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm"
                     >
                       (336) 407-1050
                     </a>
@@ -82,30 +82,30 @@ export default function ContactSection() {
               </Card>
 
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Service Area</p>
-                    <p className="text-foreground font-medium">Carolinas & Virginia Area</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Service Area</p>
+                    <p className="text-foreground font-medium text-xs sm:text-sm">Carolinas & Virginia Area</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* LinkedIn */}
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Linkedin className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">LinkedIn</p>
                     <a
                       href="https://www.linkedin.com/in/lola-jones-baker-88925a382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm truncate"
                     >
                       Connect on LinkedIn
                     </a>
@@ -115,17 +115,17 @@ export default function ContactSection() {
 
               {/* Instagram */}
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Instagram className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Instagram className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Instagram</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Instagram</p>
                     <a
                       href="https://www.instagram.com/3xhalloffamer?utm_source=qr&igsh=MWN0N3VrZ3E0dzQ4dA=="
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm truncate"
                     >
                       Follow @3xhalloffamer
                     </a>
@@ -134,22 +134,22 @@ export default function ContactSection() {
               </Card>
             </div>
 
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full px-8"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-xs sm:text-base w-full sm:w-auto"
                 onClick={() => (window.location.href = "mailto:Justoneminuteplease22@gmail.com")}
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                 Email Us
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-8 bg-transparent"
+                className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-xs sm:text-base bg-transparent w-full sm:w-auto"
                 onClick={() => (window.location.href = "tel:3369807111")}
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                 Call Now
               </Button>
             </div>
@@ -162,55 +162,55 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <Card className="glossy-card border-0 shadow-2xl">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-6 md:p-8">
                 <form
                   action="https://formsubmit.co/Justoneminuteplease22@gmail.com"
                   method="POST"
-                  className="space-y-6"
+                  className="space-y-4 sm:space-y-6"
                 >
                   <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_subject" value="New Contact Form Submission" />
 
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Name
                     </label>
-                    <Input id="name" name="name" type="text" placeholder="Your name" required />
+                    <Input id="name" name="name" type="text" placeholder="Your name" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Email
                     </label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Phone
                     </label>
-                    <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
+                    <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Message
                     </label>
                     <Textarea
                       id="message"
                       name="message"
                       placeholder="Tell us about your goals and how we can help..."
-                      rows={5}
+                      rows={4}
                       required
-                      className="resize-none"
+                      className="resize-none text-sm"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6 text-lg font-semibold shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300"
+                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-4 sm:py-5 md:py-6 text-xs sm:text-base md:text-lg font-semibold shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300"
                   >
                     Send Message
                   </Button>
