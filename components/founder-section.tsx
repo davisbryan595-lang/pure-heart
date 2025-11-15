@@ -123,15 +123,15 @@ export default function FounderSection() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4 }}
-              className="mt-8 overflow-hidden"
+              className="mt-6 sm:mt-8 overflow-hidden"
             >
-              <div className="max-w-6xl mx-auto px-4 pt-8 border-t border-muted-foreground/20">
+              <div className="max-w-6xl mx-auto pt-6 sm:pt-8 border-t border-muted-foreground/20">
                 {/* … your existing expanded content … */}
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                  <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-12">
+                  <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
                     <div>
-                      <h4 className="text-lg font-semibold text-[#0F172A] mb-2">North Greenville University Athletic Hall of Fame</h4>
-                      <p className="text-sm text-muted-foreground mb-3">October 25, 2008</p>
+                      <h4 className="text-base sm:text-lg font-semibold text-[#0F172A] mb-1 sm:mb-2">North Greenville University Athletic Hall of Fame</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">October 25, 2008</p>
                     </div>
                     <p>
                       A highly talented star from the North Greenville junior college days, Lola Jones Baker was a junior college All-Region selection her sophomore year of 1992, and also made All-Western Carolinas Junior College All-Conference. Lola averaged 15 points and 10 rebounds per game her sophomore year and had 12 points and 8 rebounds as a freshman.
@@ -151,7 +151,7 @@ export default function FounderSection() {
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.1 }}
-                      className="overflow-hidden rounded-xl shadow-lg max-w-sm w-full"
+                      className="overflow-hidden rounded-lg sm:rounded-xl shadow-lg max-w-sm w-full"
                     >
                       <img
                         src="/uni2.jpg"
@@ -166,14 +166,14 @@ export default function FounderSection() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.2 }}
-                  className="overflow-hidden rounded-xl shadow-lg"
+                  className="overflow-hidden rounded-lg sm:rounded-xl shadow-lg"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F89eb0daf96614f2095cf5fee0ecf797c?format=webp&width=800"
                     alt="Lola Jones Baker with Dr. Jo-Ann Robinson and Spud Webb at Fincastle on the Mountain"
                     className="w-full h-auto object-cover"
                   />
-                  <p className="p-4 text-center text-sm text-muted-foreground italic bg-muted">
+                  <p className="p-3 sm:p-4 text-center text-xs sm:text-sm text-muted-foreground italic bg-muted">
                     Lola Jones Baker, a former student at Bluefield State College, and Dr. Jo-Ann Robinson, vice president of Student Affairs and Enrollment Management, speak with former NBA star 'Spud' Webb at Fincastle on the Mountain during 'An Evening with Bluefield State.'
                   </p>
                 </motion.div>
