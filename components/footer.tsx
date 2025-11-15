@@ -5,11 +5,11 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-secondary via-secondary to-primary text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-gradient-to-br from-secondary via-secondary to-primary text-white py-12 sm:py-16">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           {/* Logo & Description */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             {/* Logo with hover and shine animation */}
             <a href="#home" className="flex items-center space-x-2 relative group mb-6">
               <div className="relative">
@@ -18,7 +18,7 @@ export default function Footer() {
                   alt="Pure Heart Athletics"
                   width={350}
                   height={200}
-                  className="h-28 w-auto transition-transform duration-500 group-hover:scale-105"
+                  className="h-20 sm:h-24 md:h-28 w-auto transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Glossy Shine Overlay */}
                 <div className="absolute inset-0 rounded-md overflow-hidden pointer-events-none">
@@ -27,13 +27,13 @@ export default function Footer() {
               </div>
             </a>
 
-            <p className="text-white/80 leading-relaxed mb-6">
+            <p className="text-white/80 leading-relaxed mb-6 text-sm sm:text-base">
               Empowering athletes to reach their full potential through dedication, expert coaching, and a commitment to
               excellence.
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
