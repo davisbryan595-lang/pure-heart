@@ -10,11 +10,6 @@ const events = [
     title: "B³ Youth Athletic Summit & Tournament",
     image: "https://cdn.builder.io/api/v1/image/assets%2F5c758e804cba4fa3a488e9088887877b%2Fd1094c8a7af44fafb9bb8878b3059372?format=webp&width=800",
   },
-  {
-    id: 2,
-    title: "Hoop 4 Heart Food Drive",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F5c758e804cba4fa3a488e9088887877b%2Fad12ba4cf31b4af68b0683539c310ab6?format=webp&width=800",
-  },
 ]
 
 export default function EventPopupModal() {
