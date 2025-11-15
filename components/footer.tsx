@@ -90,30 +90,30 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#home" className="text-white/80 hover:text-primary transition-colors">
+                <a href="#home" className="text-white/80 hover:text-primary transition-colors text-sm sm:text-base">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-primary transition-colors">
+                <a href="#about" className="text-white/80 hover:text-primary transition-colors text-sm sm:text-base">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-primary transition-colors">
+                <a href="#services" className="text-white/80 hover:text-primary transition-colors text-sm sm:text-base">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#team" className="text-white/80 hover:text-primary transition-colors">
+                <a href="#team" className="text-white/80 hover:text-primary transition-colors text-sm sm:text-base">
                   Meet the Team
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-primary transition-colors">
+                <a href="#contact" className="text-white/80 hover:text-primary transition-colors text-sm sm:text-base">
                   Contact Us
                 </a>
               </li>
@@ -122,10 +122,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <ul className="space-y-3 text-white/80">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Contact</h3>
+            <ul className="space-y-2 sm:space-y-3 text-white/80 text-sm sm:text-base">
               <li>
-                <a href="mailto:Justoneminuteplease22@gmail.com" className="hover:text-primary transition-colors">
+                <a href="mailto:Justoneminuteplease22@gmail.com" className="hover:text-primary transition-colors break-all">
                   Justoneminuteplease22@gmail.com
                 </a>
               </li>
@@ -135,15 +135,15 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <p className="font-semibold text-white">Service Areas:</p>
-                <p>Carolinas & Virginia Area</p>
+                <p className="font-semibold text-white text-sm sm:text-base">Service Areas:</p>
+                <p className="text-sm sm:text-base">Carolinas & Virginia Area</p>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-8 text-center text-white/60">
+        <div className="border-t border-white/20 pt-6 sm:pt-8 text-center text-white/60 text-xs sm:text-sm">
           <p>&copy; {new Date().getFullYear()} Pure Heart Athletics. All rights reserved.</p>
         </div>
       </div>
