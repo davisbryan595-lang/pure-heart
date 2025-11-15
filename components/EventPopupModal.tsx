@@ -65,7 +65,7 @@ export default function EventPopupModal() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4"
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-3 sm:p-4"
           onClick={handleClose}
         >
           <motion.div
@@ -73,16 +73,16 @@ export default function EventPopupModal() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="relative w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-sm sm:max-w-md bg-white rounded-lg sm:rounded-xl shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 z-50 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50 p-1 sm:p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
               aria-label="Close event popup"
             >
-              <X size={28} className="text-gray-800" />
+              <X size={20} className="sm:w-7 sm:h-7 text-gray-800" />
             </button>
 
             {/* Carousel Container */}
@@ -103,29 +103,29 @@ export default function EventPopupModal() {
               {/* Previous Button */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/80 hover:bg-white rounded-full shadow-md transition-colors"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-40 p-1 sm:p-2 bg-white/80 hover:bg-white rounded-full shadow-md transition-colors"
                 aria-label="Previous event"
               >
-                <ChevronLeft size={24} className="text-gray-800" />
+                <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-gray-800" />
               </button>
 
               {/* Next Button */}
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 bg-white/80 hover:bg-white rounded-full shadow-md transition-colors"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-40 p-1 sm:p-2 bg-white/80 hover:bg-white rounded-full shadow-md transition-colors"
                 aria-label="Next event"
               >
-                <ChevronRight size={24} className="text-gray-800" />
+                <ChevronRight size={20} className="sm:w-6 sm:h-6 text-gray-800" />
               </button>
             </div>
 
             {/* Slide Indicators (Dots) */}
-            <div className="flex justify-center gap-2 p-4 bg-black">
+            <div className="flex justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-black">
               {events.map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
                     currentSlide === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
                   }`}
                   whileHover={{ scale: 1.2 }}
@@ -136,7 +136,7 @@ export default function EventPopupModal() {
             </div>
 
             {/* Slide Counter */}
-            <div className="px-4 pb-3 text-center text-sm text-gray-600 bg-gray-50">
+            <div className="px-3 sm:px-4 py-2 sm:pb-3 text-center text-xs sm:text-sm text-gray-600 bg-gray-50">
               {currentSlide + 1} of {events.length}
             </div>
           </motion.div>
