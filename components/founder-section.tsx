@@ -190,7 +190,7 @@ export default function FounderSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-3 sm:p-4"
             onClick={() => setShowCert(false)}
           >
             <motion.div
@@ -198,23 +198,23 @@ export default function FounderSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="relative max-w-3xl w-full bg-white rounded-xl shadow-2xl overflow-hidden"
+              className="relative w-full max-w-3xl bg-white rounded-lg sm:rounded-xl shadow-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close */}
               <button
                 onClick={() => setShowCert(false)}
-                className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 p-1 sm:p-2 bg-white/90 hover:bg-white rounded-full shadow-md transition-colors"
                 aria-label="Close certification modal"
               >
-                <X size={24} className="text-gray-800" />
+                <X size={20} className="sm:w-6 sm:h-6 text-gray-800" />
               </button>
 
               {/* Tabs */}
               <div className="flex border-b border-gray-200">
                 <button
                   onClick={() => setCertTab('image')}
-                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
                     certTab === 'image'
                       ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
                       : 'bg-gray-50 text-gray-600 hover:text-gray-800'
@@ -224,7 +224,7 @@ export default function FounderSection() {
                 </button>
                 <button
                   onClick={() => setCertTab('pdf')}
-                  className={`flex-1 py-3 px-4 font-semibold text-center transition-colors ${
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
                     certTab === 'pdf'
                       ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
                       : 'bg-gray-50 text-gray-600 hover:text-gray-800'
@@ -235,7 +235,7 @@ export default function FounderSection() {
               </div>
 
               {/* Content */}
-              <div className="overflow-auto max-h-[85vh]">
+              <div className="overflow-auto max-h-[calc(100vh-200px)] sm:max-h-[85vh]">
                 {certTab === 'image' && (
                   <img
                     src="/certified.png"
@@ -246,7 +246,7 @@ export default function FounderSection() {
                 {certTab === 'pdf' && (
                   <iframe
                     src="/Cerfication .pdf"
-                    className="w-full h-[85vh]"
+                    className="w-full h-[calc(100vh-200px)] sm:h-[85vh]"
                     title="All Certifications PDF"
                   />
                 )}
