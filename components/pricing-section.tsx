@@ -95,20 +95,20 @@ export default function PricingSection() {
               className={plan.popular ? "md:-mt-4" : ""}
             >
               <Card
-                className={`relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl ${
+                className={`relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-lg sm:rounded-2xl ${
                   plan.popular
                     ? "bg-gradient-to-br from-[#002B5B]/90 via-[#004080]/70 to-[#1B263B]/80 text-white shadow-primary/30 ring-2 ring-primary"
                     : "bg-card"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-[#002B5B] text-white px-4 py-1 text-sm font-bold rounded-bl-lg shadow-md">
+                  <div className="absolute top-0 right-0 bg-[#002B5B] text-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold rounded-bl-lg shadow-md">
                     MOST POPULAR
                   </div>
                 )}
-                <CardHeader className="text-center pb-8 pt-8">
+                <CardHeader className="text-center pb-6 sm:pb-8 pt-6 sm:pt-8">
                   <h3
-                    className={`text-2xl font-bold mb-2 ${
+                    className={`text-xl sm:text-2xl font-bold mb-2 ${
                       plan.popular ? "text-white" : "text-foreground"
                     }`}
                   >
@@ -116,14 +116,14 @@ export default function PricingSection() {
                   </h3>
                   <div className="flex items-baseline justify-center mb-2">
                     <span
-                      className={`text-5xl font-bold ${
+                      className={`text-4xl sm:text-5xl font-bold ${
                         plan.popular ? "text-white" : "text-primary"
                       }`}
                     >
                       {plan.price}
                     </span>
                     <span
-                      className={`ml-2 ${
+                      className={`ml-2 text-sm sm:text-base ${
                         plan.popular ? "text-white/70" : "text-muted-foreground"
                       }`}
                     >
@@ -131,23 +131,23 @@ export default function PricingSection() {
                     </span>
                   </div>
                   <p
-                    className={`text-sm ${
+                    className={`text-xs sm:text-sm ${
                       plan.popular ? "text-white/80" : "text-muted-foreground"
                     }`}
                   >
                     {plan.description}
                   </p>
                 </CardHeader>
-                <CardContent className="space-y-4 pb-8">
-                  <ul className="space-y-3">
+                <CardContent className="space-y-3 sm:space-y-4 pb-6 sm:pb-8">
+                  <ul className="space-y-2 sm:space-y-3">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
+                      <li key={featureIndex} className="flex items-start gap-2 sm:gap-3">
                         <Check
-                          className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                          className={`w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0 mt-0.5 ${
                             plan.popular ? "text-white" : "text-primary"
                           }`}
                         />
-                        <span className={`${
+                        <span className={`text-xs sm:text-sm ${
                             plan.popular ? "text-white/90" : "text-foreground"
                           }`}>
                           {feature}
@@ -156,7 +156,7 @@ export default function PricingSection() {
                     ))}
                   </ul>
                   <Button
-                    className={`w-full mt-6 rounded-full py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                    className={`w-full mt-4 sm:mt-6 rounded-full py-4 sm:py-6 text-sm sm:text-lg font-semibold transition-all duration-300 hover:scale-105 ${
                       plan.popular
                         ? "bg-white text-[#002B5B] hover:bg-gray-100"
                         : "bg-[#002B5B] hover:bg-[#00376b] text-white"
