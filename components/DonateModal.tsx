@@ -42,15 +42,15 @@ export default function DonateModal() {
       <DialogTrigger asChild>
         <Button
           size="lg"
-          className="rounded-full bg-primary text-white hover:bg-primary/90 font-semibold shadow-md hover:shadow-lg transition-all"
+          className="rounded-full bg-primary text-white hover:bg-primary/90 font-semibold shadow-md hover:shadow-lg transition-all text-xs sm:text-sm md:text-base px-4 sm:px-6 py-3 sm:py-4"
         >
           Donate
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-md bg-background/95 backdrop-blur-xl border border-primary/30 shadow-2xl rounded-2xl">
+      <DialogContent className="w-full max-w-sm sm:max-w-md bg-background/95 backdrop-blur-xl border border-primary/30 shadow-2xl rounded-xl sm:rounded-2xl p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-center text-primary mb-2">
+          <DialogTitle className="text-2xl sm:text-3xl font-bold text-center text-primary mb-2">
             Support Our Athletes
           </DialogTitle>
         </DialogHeader>
@@ -59,20 +59,20 @@ export default function DonateModal() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="text-center text-muted-foreground mb-6"
+          className="text-center text-muted-foreground mb-6 text-sm sm:text-base"
         >
           Every dollar helps young athletes grow, train, and compete with passion. 💪
         </motion.p>
 
         <div className="flex items-center justify-center gap-2 mb-6">
-          <span className="text-foreground font-medium">$</span>
+          <span className="text-foreground font-medium text-sm sm:text-base">$</span>
           <Input
             type="number"
             min="1"
             placeholder="Enter amount"
             value={amount === "" ? "" : amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-40 text-center border-primary/40 focus:border-primary rounded-full"
+            className="w-32 sm:w-40 text-center border-primary/40 focus:border-primary rounded-full text-sm sm:text-base"
           />
         </div>
 
@@ -80,7 +80,7 @@ export default function DonateModal() {
           size="lg"
           onClick={handleDonate}
           disabled={loading}
-          className="w-full bg-primary text-white rounded-full py-6 font-semibold text-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:scale-105"
+          className="w-full bg-primary text-white rounded-full py-4 sm:py-6 font-semibold text-sm sm:text-base md:text-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:scale-105"
         >
           {loading ? "Processing..." : `Donate $${amount || 0}`}
         </Button>
