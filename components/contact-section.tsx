@@ -48,15 +48,15 @@ export default function ContactSection() {
 
             <div className="space-y-4 sm:space-y-6">
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Email</p>
                     <a
                       href="mailto:Justoneminuteplease22@gmail.com"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm break-all"
                     >
                       Justoneminuteplease22@gmail.com
                     </a>
@@ -65,15 +65,15 @@ export default function ContactSection() {
               </Card>
 
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Phone</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Phone</p>
                     <a
                       href="tel:3364071050"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm"
                     >
                       (336) 407-1050
                     </a>
@@ -82,30 +82,30 @@ export default function ContactSection() {
               </Card>
 
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Service Area</p>
-                    <p className="text-foreground font-medium">Carolinas & Virginia Area</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Service Area</p>
+                    <p className="text-foreground font-medium text-xs sm:text-sm">Carolinas & Virginia Area</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* LinkedIn */}
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Linkedin className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">LinkedIn</p>
                     <a
                       href="https://www.linkedin.com/in/lola-jones-baker-88925a382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm truncate"
                     >
                       Connect on LinkedIn
                     </a>
@@ -115,17 +115,17 @@ export default function ContactSection() {
 
               {/* Instagram */}
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
-                <CardContent className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Instagram className="w-6 h-6 text-primary" />
+                <CardContent className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Instagram className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Instagram</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">Instagram</p>
                     <a
                       href="https://www.instagram.com/3xhalloffamer?utm_source=qr&igsh=MWN0N3VrZ3E0dzQ4dA=="
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="text-foreground hover:text-primary transition-colors font-medium text-xs sm:text-sm truncate"
                     >
                       Follow @3xhalloffamer
                     </a>
@@ -134,22 +134,22 @@ export default function ContactSection() {
               </Card>
             </div>
 
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full px-8"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-xs sm:text-base w-full sm:w-auto"
                 onClick={() => (window.location.href = "mailto:Justoneminuteplease22@gmail.com")}
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                 Email Us
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-8 bg-transparent"
+                className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-xs sm:text-base bg-transparent w-full sm:w-auto"
                 onClick={() => (window.location.href = "tel:3369807111")}
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                 Call Now
               </Button>
             </div>
