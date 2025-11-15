@@ -36,17 +36,17 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">Let's Connect</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Let's Connect</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 sm:mb-8">
                 Whether you're ready to sign up or just have questions, we're here to help. Reach out and let's discuss
                 how we can help you achieve your goals.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <Card className="glossy-card border-0 hover:scale-105 transition-transform duration-300">
                 <CardContent className="flex items-center gap-4 p-6">
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
