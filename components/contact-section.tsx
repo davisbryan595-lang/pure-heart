@@ -162,55 +162,55 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <Card className="glossy-card border-0 shadow-2xl">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-6 md:p-8">
                 <form
                   action="https://formsubmit.co/Justoneminuteplease22@gmail.com"
                   method="POST"
-                  className="space-y-6"
+                  className="space-y-4 sm:space-y-6"
                 >
                   <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_subject" value="New Contact Form Submission" />
 
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Name
                     </label>
-                    <Input id="name" name="name" type="text" placeholder="Your name" required />
+                    <Input id="name" name="name" type="text" placeholder="Your name" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Email
                     </label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Phone
                     </label>
-                    <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
+                    <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required className="text-sm" />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                       Message
                     </label>
                     <Textarea
                       id="message"
                       name="message"
                       placeholder="Tell us about your goals and how we can help..."
-                      rows={5}
+                      rows={4}
                       required
-                      className="resize-none"
+                      className="resize-none text-sm"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6 text-lg font-semibold shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300"
+                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-4 sm:py-5 md:py-6 text-xs sm:text-base md:text-lg font-semibold shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300"
                   >
                     Send Message
                   </Button>
