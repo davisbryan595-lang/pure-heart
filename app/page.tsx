@@ -3,23 +3,19 @@ import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
 import FounderSection from "@/components/founder-section"
 import ServicesSection from "@/components/services-section"
-import TeamSection from "@/components/team-section"
 import GallerySection from "@/components/gallery-section"
 import PricingSection from "@/components/pricing-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
-import EventPopupModal from "@/components/EventPopupModal"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <EventPopupModal />
       <NavigationBar />
       <HeroSection />
       <AboutSection />
       <FounderSection />
       <ServicesSection />
-      <TeamSection />
       <GallerySection />
       <PricingSection />
       <ContactSection />
