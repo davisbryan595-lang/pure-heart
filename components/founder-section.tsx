@@ -9,7 +9,7 @@ export default function FounderSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [isExpanded, setIsExpanded] = useState(false)
   const [showCert, setShowCert] = useState(false)   // <-- image modal
-  const [certTab, setCertTab] = useState<'image' | 'pdf'>('image') // <-- tab state for cert modal
+  const [certTab, setCertTab] = useState<'image' | 'pdf' | 'pure'>('image') // <-- tab state for cert modal
 
   return (
     <section id="founder" ref={ref} className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-muted to-background">
@@ -232,6 +232,16 @@ export default function FounderSection() {
                 >
                   All Certifications
                 </button>
+                <button
+                  onClick={() => setCertTab('pure')}
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
+                    certTab === 'pure'
+                      ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
+                      : 'bg-gray-50 text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  Pure Certification
+                </button>
               </div>
 
               {/* Content */}
@@ -248,6 +258,13 @@ export default function FounderSection() {
                     src="/Cerfication .pdf"
                     className="w-full h-[calc(100vh-200px)] sm:h-[85vh]"
                     title="All Certifications PDF"
+                  />
+                )}
+                {certTab === 'pure' && (
+                  <iframe
+                    src="/pure.pdf"
+                    className="w-full h-[calc(100vh-200px)] sm:h-[85vh]"
+                    title="Pure Certification PDF"
                   />
                 )}
               </div>
