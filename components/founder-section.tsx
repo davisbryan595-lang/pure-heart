@@ -232,6 +232,16 @@ export default function FounderSection() {
                 >
                   All Certifications
                 </button>
+                <button
+                  onClick={() => setCertTab('pure')}
+                  className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 font-semibold text-center text-xs sm:text-base transition-colors ${
+                    certTab === 'pure'
+                      ? 'bg-emerald-50 text-emerald-700 border-b-2 border-emerald-700'
+                      : 'bg-gray-50 text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  Pure Certification
+                </button>
               </div>
 
               {/* Content */}
