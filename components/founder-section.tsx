@@ -260,6 +260,13 @@ export default function FounderSection() {
                     title="All Certifications PDF"
                   />
                 )}
+                {certTab === 'pure' && (
+                  <iframe
+                    src="/pure.pdf"
+                    className="w-full h-[calc(100vh-200px)] sm:h-[85vh]"
+                    title="Pure Certification PDF"
+                  />
+                )}
               </div>
             </motion.div>
           </motion.div>
